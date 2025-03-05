@@ -1,0 +1,131 @@
+// Scroll to Top Button
+let scrollTopBtn = document.getElementById("scrollTopBtn");
+
+// Show/Hide Scroll to Top Button based on scroll position
+window.onscroll = function () {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        scrollTopBtn.style.display = "block";
+    } else {
+        scrollTopBtn.style.display = "none";
+    }
+};
+
+// Scroll to the top function
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+// Smooth Scrolling for Anchor Links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Book Now Alert
+function bookNowAlert() {
+    alert("Thank you for considering Monica Hotel & Success Family Restaurant! We will get back to you shortly.");
+}
+
+// Form Validation Example (You can add this to your booking form or contact form)
+function validateForm() {
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    // Basic validation for empty fields
+    if (name === "" || email === "" || message === "") {
+        alert("Please fill out all fields.");
+        return false;
+    }
+
+    // Validate email format using a regular expression
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address.");
+        return false;
+    }
+
+    alert("Form submitted successfully!");
+    return true;
+}
+
+// Scroll Animations on Section View (Adds animation when the section is in view)
+const sections = document.querySelectorAll('section');
+const options = {
+    root: null, // Use the viewport as the root
+    rootMargin: '0px',
+    threshold: 0.5 // Trigger animation when 50% of the section is in view
+};
+
+// Animation function to add/remove classes
+function handleIntersection(entries, observer) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+        } else {
+            entry.target.classList.remove('in-view');
+        }
+    });
+}
+
+const observer = new IntersectionObserver(handleIntersection, options);
+
+// Observe each section
+sections.forEach(section => {
+    observer.observe(section);
+});
+
+// Dynamic Counter (Example: Show total bookings, visitors, etc.)
+let countSection = document.getElementById('counter-section');
+if (countSection) {
+    let count = 0;
+    let target = 500; // Example target for counter (can be bookings, visitors, etc.)
+
+    function updateCounter() {
+        if (count < target) {
+            count++;
+            document.getElementById('counter').innerText = count;
+            setTimeout(updateCounter, 10);
+        }
+    }
+
+    updateCounter();
+}
+
+// Slideshow for Images (Example: Gallery or Featured Room images)
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+const totalSlides = slides.length;
+
+function showSlide(index) {
+    if (index >= totalSlides) currentSlide = 0;
+    if (index < 0) currentSlide = totalSlides - 1;
+
+    slides.forEach(slide => {
+        slide.style.display = 'none';
+    });
+
+    slides[currentSlide].style.display = 'block';
+}
+
+function nextSlide() {
+    showSlide(currentSlide + 1);
+}
+
+function prevSlide() {
+    showSlide(currentSlide - 1);
+}
+
+// Automatically change slides every 3 seconds
+setInterval(nextSlide, 3000);
+
+// Initial call to show the first slide
+showSlide(currentSlide);
+Write to Sarsawati Pandey

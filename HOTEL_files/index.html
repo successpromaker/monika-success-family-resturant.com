@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<!-- saved from url=(0091)https://cdpn.io/cpe/boomboom/index.html?key=index.html-825c19f0-384d-29fc-f171-32340ce70222 -->
+<html lang="en" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  
+  <title>CodePen Demo</title>
+
+  <meta name="robots" content="noindex">
+
+  <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+  <link rel="mask-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+  <link rel="canonical" href="https://codepen.io/monika-the-reactor/pen/NPWjayj">
+
+  
+  
+
+  <style id="INLINE_PEN_STYLESHEET_ID">
+    /* General body and font styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 3.5em;
+    margin: 0;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+header p {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+header button {
+    background-color: #3498db;
+    border: none;
+    padding: 12px 24px;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+header button:hover {
+    background-color: #2980b9;
+}
+
+/* Navigation Bar */
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #34495e;
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #3498db;
+}
+
+/* About Section */
+#about {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 3em;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+#about p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Services Section */
+#services {
+    background-color: #ecf0f1;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#services h2 {
+    font-size: 3em;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+#services ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#services li {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#services li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+#services li strong {
+    font-size: 1.3em;
+    color: #3498db;
+}
+
+/* Location Section */
+#location {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#location h2 {
+    font-size: 3em;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+#location p {
+    font-size: 1.2em;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Work in Country Section */
+#work-in-country {
+    background-color: #ecf0f1;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#work-in-country h2 {
+    font-size: 3em;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+#work-in-country p {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Testimonials Section */
+#testimonials {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#testimonials h2 {
+    font-size: 3em;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+.testimonial {
+    margin: 20px;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.testimonial p {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.8;
+}
+
+.testimonial strong {
+    color: #3498db;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Scroll to Top Button */
+#scrollTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1.5em;
+    display: none;
+    transition: background-color 100 s ease;
+}
+
+#scrollTopBtn:hover {
+    background-color: #2980b9;
+}
+
+/* Smooth Scroll to top */
+html {
+    scroll-behavior: smooth
+Write to Sarsawati Pandey
+
+  </style>
+
+  
+<script src="./stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js.download"></script>
+<script src="./iframeConsoleRunner-6d8bf8b4b479137260842506acbb12717dace0823c023e08b96360e60b0840d9.js.download"></script>
+<script src="./iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js.download"></script>
+<script src="./iframeRuntimeErrors-4f205f2c14e769b448bcf477de2938c681660d5038bc464e3700256713ebe261.js.download"></script>
+</head>
+
+<body>
+  
+
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Monika
+    Hotel &amp; Success Family Restaurant</title>
+    <link rel="stylesheet" href="./styles.css">
+
+
+    <header>
+        <h1>Welcome to Monika Hotel &amp; Success Family Restaurant</h1>
+        <p>Your friendly hotel in Bansgadhi, Kanchan 1, Lausa, Nepal.</p>
+        <button onclick="bookNowAlert()">Book Now</button>
+    </header>
+    
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Monika Hotel &amp; Success Family Restaurant is located in the beautiful area of Bansgadhi, Kanchan 1, Lausa, Nepal. We offer a warm, welcoming environment perfect for families, business travelers, and tourists. Our restaurant serves delicious, home-cooked meals that everyone will enjoy, while our hotel rooms are designed for your comfort and relaxation. We are a family-friendly hotel that provides outstanding customer service.</p>
+        
+        <p>At Monica Hotel, we believe in supporting local businesses, offering job opportunities to the community, and ensuring the satisfaction of every guest that walks through our doors. We also understand the importance of preserving our cultural heritage, and we strive to share the flavors and hospitality of Nepal with visitors from around the world.</p>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li><strong>Comfortable Rooms:</strong> We offer well-furnished rooms equipped with modern amenities, including Wi-Fi, air-conditioning, and more.</li>
+            <li><strong>Delicious Food:</strong> Our restaurant provides a variety of Nepalese and international dishes, with fresh ingredients and authentic flavors.</li>
+            <li><strong>Event Hosting:</strong> We have space to host events, meetings, and small gatherings with all the necessary facilities and catering options.</li>
+            
+            <li><strong>Friendly Staff:</strong> Our team of experienced and friendly staff is always ready to make your stay as comfortable and pleasant as possible.</li>
+        </ul>
+    </section>
+
+    <section id="location">
+        <h2>Our Location</h2>
+        <p>Monika Hotel &amp; Success Family Restaurant is located in <strong>Bansgadhi, Kanchan 1, Lausa, Nepal</strong>, a serene and beautiful area surrounded by nature. Whether you're visiting for business or leisure, our hotel offers easy access to local attractions and transportation hubs.</p>
+        
+        <p>For more details about our services, location, and other offerings, feel free to <a href="https://www.monica-hotel-nepal.com/" target="_blank">visit our official website</a>.</p>
+        
+        <h3>How to Get Here</h3>
+        <ul>
+            <li><strong>By Car:</strong> We are located a short 20-minute drive from the main highway, easily accessible by taxi or private car.</li>
+            <li><strong>By Bus:</strong> The nearest bus station is just a 10-minute walk from the hotel, with frequent buses to and from major cities.</li>
+            
+        </ul>
+    </section>
+
+    &lt;
+    
+
+    <section id="testimonials">
+        
+        <div class="testimonial">
+           <h2>Local Services - Danapur Tall &amp; Nearby Places</h2>
+        <p><strong>Hotel Monika &amp; Success Family Restaurant</strong> is proud to serve visitors to <b>Danapur Tall</b> and other nearby locations. We provide comfortable dining, authentic Nepali cuisine, and excellent hospitality to make your visit enjoyable.</p>
+        <p>Our services include:</p>
+        <ul>
+            <li>Delicious Nepali &amp; Indian food</li>
+            <li>Comfortable dining experience</li>
+            <li>Takeaway &amp; home delivery options</li>
+            <li>Guidance for travelers visiting Danapur Tall</li>
+        </ul>
+        <p>Visit us today and enjoy the best hospitality in town!</p>
+        <p>Visit us today and enjoy the best hospitality in town!</p><p>TO SEE THE MENU CLICK HERE↓
+    </p></div>
+<a href="https://postimg.cc/py0MJyHS" target="_blank"><img src="https://i.postimg.cc/4NG4ZhFX/menu.png" border="0" alt="menu"></a>
+           <h2>What Our Guests Say</h2> <p>"Monika Hotel exceeded my expectations. The rooms were clean and comfortable, and the staff was very friendly and accommodating. The food at the restaurant was amazing, and I will definitely return on my next trip to Nepal!" - Susan </p><p>"This is the perfect place for a family vacation. The kids loved the food, and we had such a relaxing time here. Highly recommend this hotel to anyone visiting the area!" - Ravi P.</p>
+        
+    </section>
+
+    <footer>
+        <p>Contact Us:+977 9867041988 <a href="mailto:info@monica-hotel-nepal.com">info@monika-hotel-nepal.com</a></p>
+        <p>Follow us on social media: 
+            <a href="https://www.facebook.com/monicahotelnepal" target="_blank">Facebook</a> |
+            <a href="https://www.instagram.com/monicahotelnepal" target="_blank">Instagram</a>
+        </p>
+    </footer>
+
+    <script src="./script.js.download"></script>
+
+
+Write to Sarsawati Pandey
+ 
+  
+  <script src="./pen.js.download" crossorigin=""></script>
+
+
+</body></html>
